@@ -1,5 +1,7 @@
 import React from "react";
 import { Navbar, Container, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import CartWidget from "./CartWidget";
+import ItemListContainer from "./ItemListContainer";
 
 const NavBar = () => {
     return (
@@ -20,6 +22,7 @@ const NavBar = () => {
                                 <NavDropdown.Item href="#action/3.4">More</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
+                        <CartWidget/>
                         <Form className="d-flex">
                             <FormControl
                                 type="search"
@@ -38,6 +41,7 @@ const NavBar = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            <ItemListContainer message="hello friend!"/>
         </>
     );
 };
